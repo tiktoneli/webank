@@ -31,10 +31,7 @@ Content-Type: application/json
   "complemento": "CASA 04",
   "bairro": "Bairro XPTO",
   "cidade": "Teresópolis - RJ",
-  "uf": "RJ",
-  "titular": {
-        "id": 7
-    }
+  "uf": "RJ"
 }
 ###
 
