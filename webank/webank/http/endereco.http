@@ -36,3 +36,5 @@ Content-Type: application/json
 ###
 
 DELETE  http://localhost:8080/api/enderecos/1
+###
+GET http://localhost:8080/api/enderecos/email

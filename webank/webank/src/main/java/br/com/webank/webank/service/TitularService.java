@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import javax.mail.MessagingException;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +21,7 @@ import br.com.webank.webank.dto.titular.TitularResponseDTO;
 import br.com.webank.webank.model.ContaBancaria;
 import br.com.webank.webank.model.Endereco;
 import br.com.webank.webank.model.Titular;
+import br.com.webank.webank.model.email.Email;
 import br.com.webank.webank.repository.TitularRepository;
 
 @Service
@@ -35,6 +38,9 @@ public class TitularService {
 
     @Autowired
     private ModelMapper mapper;
+
+    @Autowired
+    private EmailService emailService;
 
     public List<TitularResponseDTO> obterTodos() {
 
@@ -125,5 +131,9 @@ public class TitularService {
 
         return adicionadas;
     }
+
+    // public void enviarEmail(Email email) throws MessagingException{
+    //     emailService.enviar(email);
+    // }
 
 }
