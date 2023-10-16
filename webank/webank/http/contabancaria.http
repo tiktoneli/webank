@@ -11,17 +11,19 @@ Content-Type: application/json
     "agencia":"0001",
     "numero": "12349",
     "saldo": 300.0,
-    "id_titular": 1
+    "titular": {
+        "id": 7
+    }
 }
-### 
+###
 
-PUT http://localhost:8080/api/contas-bancarias/1
+PUT http://localhost:8080/api/contas-bancarias/2
 Content-Type: application/json
 
 {
     "agencia":"0001",
-    "numero": "12346",
-    "saldo": 300.0
+    "numero": "99999",
+    "saldo": 800.0
 }
 ###
 

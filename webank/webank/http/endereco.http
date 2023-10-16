@@ -8,7 +8,7 @@ POST http://localhost:8080/api/enderecos
 Content-Type: application/json
 
 {
-    "cep":"2898542",
+    "cep":"65656565",
     "logradouro": "Rua das Amélias",
     "numero": 50,
     "complemento": "CASA 03",
@@ -16,22 +16,25 @@ Content-Type: application/json
     "cidade":"Teresópolis",
     "uf": "RJ",
     "titular": {
-        "id": 1
+        "id": 7
     }
 }
 ### 
 
-PUT http://localhost:8080/api/enderecos/2
+PUT http://localhost:8080/api/enderecos/7
 Content-Type: application/json
 
 {
-  "cep": "2898543",
+  "cep": "99999",
   "logradouro": "Rua das flores",
   "numero": 100,
   "complemento": "CASA 04",
   "bairro": "Bairro XPTO",
   "cidade": "Teresópolis - RJ",
-  "uf": "RJ"
+  "uf": "RJ",
+  "titular": {
+        "id": 7
+    }
 }
 ###
 

@@ -58,6 +58,7 @@ public class ContaBancariaService {
     public ContaBancariaResponseDTO adicionar(ContaBancariaRequestDTO contaBancariaRequest) {
 
         ContaBancaria contaModel = mapper.map(contaBancariaRequest, ContaBancaria.class);
+        
         contaModel = contaBancariaRepository.save(contaModel);
 
         // contaBancariaRequest.setId(0);
@@ -78,8 +79,6 @@ public class ContaBancariaService {
 
     public void deletar(Long id) {
         obterPorId(id);
-
         contaBancariaRepository.deleteById(id);
     }
-
 }

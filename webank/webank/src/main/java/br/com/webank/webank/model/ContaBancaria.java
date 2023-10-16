@@ -12,6 +12,8 @@ import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
+import br.com.webank.webank.dto.contaBancaria.ContaBancariaRequestDTO;
+
 @Entity
 public class ContaBancaria {
     
@@ -37,13 +39,13 @@ public class ContaBancaria {
     @JsonBackReference
     private Titular titular;
 
-    public ContaBancaria(long id, String agencia, String numero, double saldo) {
-        this.id = id;
-        this.agencia = agencia;
-        this.numero = numero;
-        this.saldo = saldo;
-        this.dataCadastro = new Date();
-    }   
+    public ContaBancaria(ContaBancariaRequestDTO contaRequest) {
+        id = 0l;
+        agencia = contaRequest.getAgencia();
+        numero = contaRequest.getNumero();
+        saldo = contaRequest.getSaldo();
+        dataCadastro = new Date();
+    }
 
     public ContaBancaria() {
         this.dataCadastro = new Date();

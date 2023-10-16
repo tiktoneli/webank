@@ -1,11 +1,11 @@
 package br.com.webank.webank.dto.contaBancaria;
 
 
-public class ContaBancariaRequestDTO {
-    private String agencia;
-    private String numero; 
-    private double saldo;
-    private Long idTitular;
+public abstract class ContaBancariaBaseDTO {
+    protected String agencia;
+    protected String numero; 
+    protected double saldo;
+    protected Long idTitular;
 
     public String getAgencia() {
         return agencia;

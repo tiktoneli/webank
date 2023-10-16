@@ -8,9 +8,9 @@ POST http://localhost:8080/api/titulares
 Content-Type: application/json
 
 {
-    "nome": "Ciclano da Silva",
+    "nome": "77777 da Silva",
     "cpfOuCnpj": "523.456.789-02",
-    "email": "sdfsdf@gmail.com",
+    "email": "66666@gmail.com",
     "telefone": "(21) 9 91999199",
     "dataNascimento": "1990-08-06T00:00:00",
     "endereco": {
@@ -30,11 +30,8 @@ Content-Type: application/json
         },
         {
            "agencia": "0002",
-           "numero": "123459",
+           "numero": "123458",
            "saldo": 1000.0
         }
     ]
 }
-
-###
-DELETE http://localhost:8080/api/titulares/1
